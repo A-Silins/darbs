@@ -3,272 +3,105 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #101510;
+    background-color: #111;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
-
-
+/* HEADER */
 header {
-    position: absolute;
-    width: 100%;
-    padding: 25px 8%;
-    z-index: 10;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 30px;
-    letter-spacing: 4px;
-}
-
-.logo span,
-footer span {
-    color: #d8a33e;
-}
-
-nav ul {
-    display: flex;
-    gap: 35px;
-    list-style: none;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #d8a33e;
+/* MAIN */
+main {
+    padding: 40px 8%;
 }
-
-
 
 .hero {
-    min-height: 100vh;
-    background:
-        linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.15)),
-        url("https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=1800")
-        center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+    margin-bottom: 30px;
 }
 
-.hero-content {
-    max-width: 650px;
-}
-
-.subtitle {
-    color: #d8a33e;
-    letter-spacing: 5px;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(55px, 9vw, 110px);
-    line-height: 1;
-    margin-bottom: 25px;
-}
-
-.hero h1 span,
-.about-text span,
-.facts h2 span,
-.habitat h2 span {
-    color: #d8a33e;
-}
-
-.description {
-    color: #ddd;
-    line-height: 1.8;
-    max-width: 450px;
-    margin-bottom: 35px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #d8a33e;
-    color: #111;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: white;
-    transform: translateY(-4px);
-}
-
-
-
-.about {
-    padding: 110px 10%;
-    display: flex;
-    align-items: center;
-    gap: 70px;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 15px 15px 0 #d8a33e;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2,
-.facts h2,
-.habitat h2 {
-    font-size: 45px;
-    margin-bottom: 25px;
-}
-
-.about-text p:not(.subtitle) {
-    color: #aaa;
-    line-height: 1.9;
-    margin-bottom: 15px;
-}
-
-
-
-.fakti {
-    padding: 100px 10%;
-    text-align: center;
-    background: #192019;
-}
-
-.faktu-container {
+.section {
     display: flex;
     gap: 25px;
-    margin-top: 55px;
+    margin-bottom: 30px;
 }
 
-.fakti {
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* EMPTY BOXES */
+.empty-box {
+    background: #1d1d1d;
+    border: 1px solid #333;
+    min-height: 200px;
     flex: 1;
-    background: #242e24;
-    padding: 40px 25px;
-    border-bottom: 3px solid #d8a33e;
-    transition: 0.3s;
+    border-radius: 4px;
 }
 
-.fact-card:hover {
-    transform: translateY(-10px);
-    background: #303d30;
+.hero .empty-box {
+    min-height: 400px;
 }
 
-.fakti h3 {
-    color: #d8a33e;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-.fakti h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.fakti p {
-    color: #aaa;
-    line-height: 1.7;
-}
-
-
-.habitat {
-    padding: 110px 10%;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.habitat div {
-    flex: 1;
-}
-
-.habitat p:not(.subtitle) {
-    color: #aaa;
-    line-height: 1.8;
-}
-
-.habitat img {
-    width: 50%;
-    border-radius: 10px;
-}
-
-
-
+/* FOOTER */
 footer {
-    background: #080d09;
-    padding: 45px 10%;
-    text-align: center;
+    padding: 30px 8%;
+    border-top: 1px solid #333;
 }
 
-footer h2 {
-    letter-spacing: 5px;
-    margin-bottom: 15px;
+footer .empty-box {
+    min-height: 100px;
 }
 
-footer p {
-    color: #888;
-    margin-bottom: 10px;
-}
-
-
-@media (max-width: 768px) {
-
-    nav {
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    header {
         flex-direction: column;
+        height: auto;
+        padding: 20px;
         gap: 20px;
     }
 
-    nav ul {
-        gap: 15px;
+    nav {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .hero {
-        padding: 150px 7% 70px;
-        background-position: center;
-    }
-
-    .about,
-    .habitat {
-        flex-direction: column;
-        padding: 70px 7%;
-    }
-
-    .fact-container {
+    .section {
         flex-direction: column;
     }
 
-    .habitat img {
-        width: 100%;
-    }
-
-    .about-text h2,
-    .facts h2,
-    .habitat h2 {
-        font-size: 35px;
+    .gallery {
+        grid-template-columns: 1fr;
     }
 }
