@@ -152,19 +152,19 @@ nav a:hover {
 
 
 
-.facts {
+.fakti {
     padding: 100px 10%;
     text-align: center;
     background: #192019;
 }
 
-.fact-container {
+.faktu-container {
     display: flex;
     gap: 25px;
     margin-top: 55px;
 }
 
-.fact-card {
+.fakti {
     flex: 1;
     background: #242e24;
     padding: 40px 25px;
@@ -177,18 +177,18 @@ nav a:hover {
     background: #303d30;
 }
 
-.fact-card h3 {
+.fakti h3 {
     color: #d8a33e;
     font-size: 45px;
     margin-bottom: 20px;
 }
 
-.fact-card h4 {
+.fakti h4 {
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-.fact-card p {
+.fakti p {
     color: #aaa;
     line-height: 1.7;
 }
