@@ -11,7 +11,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+
 header {
     height: 80px;
     display: flex;
@@ -27,10 +27,13 @@ header {
     font-weight: bold;
 }
 
+
 nav {
     display: flex;
     gap: 30px;
 }
+
+
 
 nav a {
     color: white;
@@ -38,7 +41,11 @@ nav a {
     font-size: 14px;
 }
 
-/* MAIN */
+
+/*--------------------------------*/
+
+
+
 main {
     padding: 40px 8%;
 }
@@ -53,12 +60,6 @@ main {
     margin-bottom: 30px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-bottom: 30px;
-}
 
 /* EMPTY BOXES */
 .empty-box {
@@ -71,16 +72,6 @@ main {
 
 .hero .empty-box {
     min-height: 400px;
-}
-
-/* FOOTER */
-footer {
-    padding: 30px 8%;
-    border-top: 1px solid #333;
-}
-
-footer .empty-box {
-    min-height: 100px;
 }
 
 /* RESPONSIVE */
